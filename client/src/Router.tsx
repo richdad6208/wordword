@@ -1,10 +1,22 @@
 import { createBrowserRouter } from "react-router-dom";
-import App from "./App";
+import Root from "./Root";
+import Solution from "./screen/Solution";
+import Saying from "./screen/Saying";
 
 const Router = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
+    element: <Root />,
+    children: [
+      {
+        path: "solution",
+        element: <Solution />,
+      },
+      {
+        path: "word",
+        element: <Saying />,
+      },
+    ],
   },
 ]);
 

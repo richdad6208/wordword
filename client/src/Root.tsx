@@ -1,5 +1,6 @@
+import { Outlet } from "react-router-dom";
 import Heading from "./component/Heading";
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle, styled } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
 @font-face {
@@ -18,7 +19,7 @@ const GlobalStyle = createGlobalStyle`
   padding: 0;
   color: inherit;
   text-decoration: inherit;
-  font: initial;
+  font: inherit;
 }
 ul,
 ol {
@@ -53,13 +54,21 @@ body {
 }
 `;
 
-function App() {
+const Container = styled.div`
+  width: min(1200px, 100% - 4rem);
+  margin-inline: auto;
+`;
+
+function Root() {
   return (
     <>
       <GlobalStyle />
-      <Heading />
+      <Container>
+        <Heading />
+        <Outlet />
+      </Container>
     </>
   );
 }
 
-export default App;
+export default Root;
