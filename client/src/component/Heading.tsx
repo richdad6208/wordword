@@ -33,6 +33,9 @@ function Heading() {
       <Nav>
         <ul>
           <li>
+            <Link to="/word">명언 등록</Link>
+          </li>
+          <li>
             <Link to="/solution">고민게시판</Link>
           </li>
           <li>

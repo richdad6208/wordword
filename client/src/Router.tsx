@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import Root from "./Root";
 import Solution from "./screen/Solution";
+import Saying from "./screen/Saying";
 
 const Router = createBrowserRouter([
   {
@@ -10,6 +11,10 @@ const Router = createBrowserRouter([
       {
         path: "solution",
         element: <Solution />,
+      },
+      {
+        path: "word",
+        element: <Saying />,
       },
     ],
   },
